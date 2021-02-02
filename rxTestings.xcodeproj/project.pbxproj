@@ -3,52 +3,39 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CDB5BB278CE2F21B742B0B5 /* Pods_rxTestings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC391807E351617DC69E7DA3 /* Pods_rxTestings.framework */; };
 		F320B0EB25C876C700C9BBBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F320B0EA25C876C700C9BBBC /* AppDelegate.swift */; };
-		F320B0ED25C876C700C9BBBC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F320B0EC25C876C700C9BBBC /* SceneDelegate.swift */; };
-		F320B0EF25C876C800C9BBBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F320B0EE25C876C800C9BBBC /* ViewController.swift */; };
-		F320B0F225C876C800C9BBBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F320B0F025C876C800C9BBBC /* Main.storyboard */; };
+		F320B0EF25C876C800C9BBBC /* ImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F320B0EE25C876C800C9BBBC /* ImagesViewController.swift */; };
 		F320B0F425C876E700C9BBBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F320B0F325C876E700C9BBBC /* Assets.xcassets */; };
 		F320B0F725C876E800C9BBBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F320B0F525C876E800C9BBBC /* LaunchScreen.storyboard */; };
-		F320B10225C876EC00C9BBBC /* rxTestingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F320B10125C876EC00C9BBBC /* rxTestingsTests.swift */; };
-		F320B10D25C876EC00C9BBBC /* rxTestingsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F320B10C25C876EC00C9BBBC /* rxTestingsUITests.swift */; };
+		F320B12825C87CAB00C9BBBC /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F320B12725C87CAB00C9BBBC /* Item.swift */; };
+		F320B13425C87E2E00C9BBBC /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F320B13325C87E2E00C9BBBC /* ImageLoader.swift */; };
+		F320B13925C87E6600C9BBBC /* NetworkRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F320B13825C87E6600C9BBBC /* NetworkRequestError.swift */; };
+		F320B13E25C8823000C9BBBC /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F320B13D25C8823000C9BBBC /* ImageCell.swift */; };
+		F320B14325C883E200C9BBBC /* ImageCellViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F320B14225C883E200C9BBBC /* ImageCellViewModelProtocol.swift */; };
+		F320B14825C884C000C9BBBC /* ImagesViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F320B14725C884C000C9BBBC /* ImagesViewModelProtocol.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		F320B0FE25C876EC00C9BBBC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F320B0DF25C876C700C9BBBC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F320B0E625C876C700C9BBBC;
-			remoteInfo = rxTestings;
-		};
-		F320B10925C876EC00C9BBBC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F320B0DF25C876C700C9BBBC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F320B0E625C876C700C9BBBC;
-			remoteInfo = rxTestings;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		25EE8B0E2BBE14CF06FD634A /* Pods-rxTestings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rxTestings.release.xcconfig"; path = "Target Support Files/Pods-rxTestings/Pods-rxTestings.release.xcconfig"; sourceTree = "<group>"; };
+		E8A9D85BA542227BB4129D00 /* Pods-rxTestings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rxTestings.debug.xcconfig"; path = "Target Support Files/Pods-rxTestings/Pods-rxTestings.debug.xcconfig"; sourceTree = "<group>"; };
 		F320B0E725C876C700C9BBBC /* rxTestings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rxTestings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F320B0EA25C876C700C9BBBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F320B0EC25C876C700C9BBBC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F320B0EE25C876C800C9BBBC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F320B0F125C876C800C9BBBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F320B0EE25C876C800C9BBBC /* ImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesViewController.swift; sourceTree = "<group>"; };
 		F320B0F325C876E700C9BBBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F320B0F625C876E800C9BBBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F320B0F825C876E800C9BBBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F320B0FD25C876EC00C9BBBC /* rxTestingsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rxTestingsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F320B10125C876EC00C9BBBC /* rxTestingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rxTestingsTests.swift; sourceTree = "<group>"; };
-		F320B10325C876EC00C9BBBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F320B10825C876EC00C9BBBC /* rxTestingsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rxTestingsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F320B10C25C876EC00C9BBBC /* rxTestingsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rxTestingsUITests.swift; sourceTree = "<group>"; };
-		F320B10E25C876EC00C9BBBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F320B12725C87CAB00C9BBBC /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		F320B13325C87E2E00C9BBBC /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		F320B13825C87E6600C9BBBC /* NetworkRequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestError.swift; sourceTree = "<group>"; };
+		F320B13D25C8823000C9BBBC /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		F320B14225C883E200C9BBBC /* ImageCellViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCellViewModelProtocol.swift; sourceTree = "<group>"; };
+		F320B14725C884C000C9BBBC /* ImagesViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesViewModelProtocol.swift; sourceTree = "<group>"; };
+		FC391807E351617DC69E7DA3 /* Pods_rxTestings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rxTestings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,33 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F320B0FA25C876EC00C9BBBC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F320B10525C876EC00C9BBBC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				0CDB5BB278CE2F21B742B0B5 /* Pods_rxTestings.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E7EC27A1647434741F16070 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E8A9D85BA542227BB4129D00 /* Pods-rxTestings.debug.xcconfig */,
+				25EE8B0E2BBE14CF06FD634A /* Pods-rxTestings.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5F4F2DD6D703B8FAAD0380A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC391807E351617DC69E7DA3 /* Pods_rxTestings.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F320B0DE25C876C700C9BBBC = {
 			isa = PBXGroup;
 			children = (
 				F320B0E925C876C700C9BBBC /* rxTestings */,
-				F320B10025C876EC00C9BBBC /* rxTestingsTests */,
-				F320B10B25C876EC00C9BBBC /* rxTestingsUITests */,
 				F320B0E825C876C700C9BBBC /* Products */,
+				3E7EC27A1647434741F16070 /* Pods */,
+				5F4F2DD6D703B8FAAD0380A2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,8 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				F320B0E725C876C700C9BBBC /* rxTestings.app */,
-				F320B0FD25C876EC00C9BBBC /* rxTestingsTests.xctest */,
-				F320B10825C876EC00C9BBBC /* rxTestingsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,33 +88,59 @@
 		F320B0E925C876C700C9BBBC /* rxTestings */ = {
 			isa = PBXGroup;
 			children = (
-				F320B0EA25C876C700C9BBBC /* AppDelegate.swift */,
-				F320B0EC25C876C700C9BBBC /* SceneDelegate.swift */,
-				F320B0EE25C876C800C9BBBC /* ViewController.swift */,
-				F320B0F025C876C800C9BBBC /* Main.storyboard */,
-				F320B0F325C876E700C9BBBC /* Assets.xcassets */,
-				F320B0F525C876E800C9BBBC /* LaunchScreen.storyboard */,
+				F320B12625C87B3800C9BBBC /* Model */,
+				F320B12E25C87D6500C9BBBC /* ImagesList */,
+				F320B12C25C87D0300C9BBBC /* Services */,
+				F320B12D25C87D1A00C9BBBC /* SupportingFiles */,
 				F320B0F825C876E800C9BBBC /* Info.plist */,
 			);
 			path = rxTestings;
 			sourceTree = "<group>";
 		};
-		F320B10025C876EC00C9BBBC /* rxTestingsTests */ = {
+		F320B12625C87B3800C9BBBC /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F320B10125C876EC00C9BBBC /* rxTestingsTests.swift */,
-				F320B10325C876EC00C9BBBC /* Info.plist */,
+				F320B12725C87CAB00C9BBBC /* Item.swift */,
 			);
-			path = rxTestingsTests;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		F320B10B25C876EC00C9BBBC /* rxTestingsUITests */ = {
+		F320B12C25C87D0300C9BBBC /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				F320B10C25C876EC00C9BBBC /* rxTestingsUITests.swift */,
-				F320B10E25C876EC00C9BBBC /* Info.plist */,
+				F320B13325C87E2E00C9BBBC /* ImageLoader.swift */,
+				F320B13825C87E6600C9BBBC /* NetworkRequestError.swift */,
 			);
-			path = rxTestingsUITests;
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F320B12D25C87D1A00C9BBBC /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				F320B0EA25C876C700C9BBBC /* AppDelegate.swift */,
+				F320B0F325C876E700C9BBBC /* Assets.xcassets */,
+				F320B0F525C876E800C9BBBC /* LaunchScreen.storyboard */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		F320B12E25C87D6500C9BBBC /* ImagesList */ = {
+			isa = PBXGroup;
+			children = (
+				F320B0EE25C876C800C9BBBC /* ImagesViewController.swift */,
+				F320B14725C884C000C9BBBC /* ImagesViewModelProtocol.swift */,
+				F320B12F25C87D7200C9BBBC /* Cell */,
+			);
+			path = ImagesList;
+			sourceTree = "<group>";
+		};
+		F320B12F25C87D7200C9BBBC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F320B13D25C8823000C9BBBC /* ImageCell.swift */,
+				F320B14225C883E200C9BBBC /* ImageCellViewModelProtocol.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,9 +150,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F320B11125C876EC00C9BBBC /* Build configuration list for PBXNativeTarget "rxTestings" */;
 			buildPhases = (
+				1513715B7F8320EE3E5AF091 /* [CP] Check Pods Manifest.lock */,
 				F320B0E325C876C700C9BBBC /* Sources */,
 				F320B0E425C876C700C9BBBC /* Frameworks */,
 				F320B0E525C876C700C9BBBC /* Resources */,
+				D2A544EF32FD2DE67FC7D59F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -147,42 +164,6 @@
 			productName = rxTestings;
 			productReference = F320B0E725C876C700C9BBBC /* rxTestings.app */;
 			productType = "com.apple.product-type.application";
-		};
-		F320B0FC25C876EC00C9BBBC /* rxTestingsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F320B11425C876EC00C9BBBC /* Build configuration list for PBXNativeTarget "rxTestingsTests" */;
-			buildPhases = (
-				F320B0F925C876EC00C9BBBC /* Sources */,
-				F320B0FA25C876EC00C9BBBC /* Frameworks */,
-				F320B0FB25C876EC00C9BBBC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F320B0FF25C876EC00C9BBBC /* PBXTargetDependency */,
-			);
-			name = rxTestingsTests;
-			productName = rxTestingsTests;
-			productReference = F320B0FD25C876EC00C9BBBC /* rxTestingsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		F320B10725C876EC00C9BBBC /* rxTestingsUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F320B11725C876EC00C9BBBC /* Build configuration list for PBXNativeTarget "rxTestingsUITests" */;
-			buildPhases = (
-				F320B10425C876EC00C9BBBC /* Sources */,
-				F320B10525C876EC00C9BBBC /* Frameworks */,
-				F320B10625C876EC00C9BBBC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F320B10A25C876EC00C9BBBC /* PBXTargetDependency */,
-			);
-			name = rxTestingsUITests;
-			productName = rxTestingsUITests;
-			productReference = F320B10825C876EC00C9BBBC /* rxTestingsUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -195,14 +176,6 @@
 				TargetAttributes = {
 					F320B0E625C876C700C9BBBC = {
 						CreatedOnToolsVersion = 12.4;
-					};
-					F320B0FC25C876EC00C9BBBC = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = F320B0E625C876C700C9BBBC;
-					};
-					F320B10725C876EC00C9BBBC = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = F320B0E625C876C700C9BBBC;
 					};
 				};
 			};
@@ -220,8 +193,6 @@
 			projectRoot = "";
 			targets = (
 				F320B0E625C876C700C9BBBC /* rxTestings */,
-				F320B0FC25C876EC00C9BBBC /* rxTestingsTests */,
-				F320B10725C876EC00C9BBBC /* rxTestingsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -233,77 +204,72 @@
 			files = (
 				F320B0F725C876E800C9BBBC /* LaunchScreen.storyboard in Resources */,
 				F320B0F425C876E700C9BBBC /* Assets.xcassets in Resources */,
-				F320B0F225C876C800C9BBBC /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F320B0FB25C876EC00C9BBBC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F320B10625C876EC00C9BBBC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1513715B7F8320EE3E5AF091 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-rxTestings-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2A544EF32FD2DE67FC7D59F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-rxTestings/Pods-rxTestings-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-rxTestings/Pods-rxTestings-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-rxTestings/Pods-rxTestings-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F320B0E325C876C700C9BBBC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F320B0EF25C876C800C9BBBC /* ViewController.swift in Sources */,
+				F320B0EF25C876C800C9BBBC /* ImagesViewController.swift in Sources */,
+				F320B12825C87CAB00C9BBBC /* Item.swift in Sources */,
+				F320B13425C87E2E00C9BBBC /* ImageLoader.swift in Sources */,
 				F320B0EB25C876C700C9BBBC /* AppDelegate.swift in Sources */,
-				F320B0ED25C876C700C9BBBC /* SceneDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F320B0F925C876EC00C9BBBC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F320B10225C876EC00C9BBBC /* rxTestingsTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F320B10425C876EC00C9BBBC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F320B10D25C876EC00C9BBBC /* rxTestingsUITests.swift in Sources */,
+				F320B14825C884C000C9BBBC /* ImagesViewModelProtocol.swift in Sources */,
+				F320B14325C883E200C9BBBC /* ImageCellViewModelProtocol.swift in Sources */,
+				F320B13925C87E6600C9BBBC /* NetworkRequestError.swift in Sources */,
+				F320B13E25C8823000C9BBBC /* ImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		F320B0FF25C876EC00C9BBBC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F320B0E625C876C700C9BBBC /* rxTestings */;
-			targetProxy = F320B0FE25C876EC00C9BBBC /* PBXContainerItemProxy */;
-		};
-		F320B10A25C876EC00C9BBBC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F320B0E625C876C700C9BBBC /* rxTestings */;
-			targetProxy = F320B10925C876EC00C9BBBC /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		F320B0F025C876C800C9BBBC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F320B0F125C876C800C9BBBC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F320B0F525C876E800C9BBBC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -433,12 +399,14 @@
 		};
 		F320B11225C876EC00C9BBBC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8A9D85BA542227BB4129D00 /* Pods-rxTestings.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 67ZSXZ9YX9;
 				INFOPLIST_FILE = rxTestings/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -446,18 +414,20 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.elenatsegelnik.rxTestings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		F320B11325C876EC00C9BBBC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25EE8B0E2BBE14CF06FD634A /* Pods-rxTestings.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 67ZSXZ9YX9;
 				INFOPLIST_FILE = rxTestings/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,91 +435,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.elenatsegelnik.rxTestings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		F320B11525C876EC00C9BBBC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 67ZSXZ9YX9;
-				INFOPLIST_FILE = rxTestingsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.elenatsegelnik.rxTestingsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rxTestings.app/rxTestings";
-			};
-			name = Debug;
-		};
-		F320B11625C876EC00C9BBBC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 67ZSXZ9YX9;
-				INFOPLIST_FILE = rxTestingsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.elenatsegelnik.rxTestingsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rxTestings.app/rxTestings";
-			};
-			name = Release;
-		};
-		F320B11825C876EC00C9BBBC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 67ZSXZ9YX9;
-				INFOPLIST_FILE = rxTestingsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.elenatsegelnik.rxTestingsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = rxTestings;
-			};
-			name = Debug;
-		};
-		F320B11925C876EC00C9BBBC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 67ZSXZ9YX9;
-				INFOPLIST_FILE = rxTestingsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.elenatsegelnik.rxTestingsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = rxTestings;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -570,24 +456,6 @@
 			buildConfigurations = (
 				F320B11225C876EC00C9BBBC /* Debug */,
 				F320B11325C876EC00C9BBBC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F320B11425C876EC00C9BBBC /* Build configuration list for PBXNativeTarget "rxTestingsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F320B11525C876EC00C9BBBC /* Debug */,
-				F320B11625C876EC00C9BBBC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F320B11725C876EC00C9BBBC /* Build configuration list for PBXNativeTarget "rxTestingsUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F320B11825C876EC00C9BBBC /* Debug */,
-				F320B11925C876EC00C9BBBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
