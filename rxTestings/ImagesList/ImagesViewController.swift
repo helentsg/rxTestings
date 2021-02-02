@@ -80,7 +80,6 @@ extension ImagesViewController {
     
     func setupTableView() {
         
-        tableView.isUserInteractionEnabled = true
         tableView.estimatedRowHeight = 316
         tableView.rowHeight = UITableView.automaticDimension
         tableView.register(ImageCell.self, forCellReuseIdentifier: ImageCell.identifier)

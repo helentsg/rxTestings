@@ -92,22 +92,15 @@ extension ImageCell {
     
     func setupView() {
         
-        contentView.isUserInteractionEnabled = true
-        
-        stackView.isUserInteractionEnabled = true
         stackView.axis = .horizontal
         stackView.alignment = .fill
         stackView.distribution = .equalSpacing
         stackView.spacing = 30
         
-        scrollView.isUserInteractionEnabled = true
         scrollView.isScrollEnabled = true
         scrollView.showsVerticalScrollIndicator = true
         scrollView.layer.cornerRadius = 16
         
-        containerView.isUserInteractionEnabled = true
-        
-        imageStackView.isUserInteractionEnabled = true
         imageStackView.axis = .vertical
         imageStackView.alignment = .fill
         imageStackView.distribution = .equalSpacing
