@@ -53,7 +53,7 @@ extension ImageCell {
         
         if let item = item {
             let numberString = String(item.number)
-            let text = item.isFifth ? "<- Scroll me!" : "# \(numberString)"
+            let text = item.isFifth ? "Scrollable Tall Image" : "# \(numberString)"
             titleLabel.text = text
             activityIndicator.startAnimating()
             
@@ -115,6 +115,8 @@ extension ImageCell {
         
         placeholderImageView.layer.cornerRadius = 16
         
+        titleLabel.numberOfLines = 0
+        
     }
     
     func addSubviews() {
@@ -133,9 +135,10 @@ extension ImageCell {
         
         stackView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            stackView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 50),
             stackView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             stackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
+            stackView.trailingAnchor.constraint(lessThanOrEqualTo: contentView.trailingAnchor, constant: -8),
             stackView.bottomAnchor.constraint(greaterThanOrEqualTo: contentView.bottomAnchor, constant: -8)
         ])
         

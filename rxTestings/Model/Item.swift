@@ -20,7 +20,7 @@ struct Item {
         // и все остальные квадратные
         
         let size = isFifth ? "150x500" : "150"
-        let color = isFifth ? "0000FF/808080" : "000000/FFFFFF"
+        let color = isFifth ? "0000FF/FFFFFF" : "000000/FFFFFF"
         
         self.url = URL(string: "https://via.placeholder.com/\(size)/\(color)/?text=\(number)")!
     }
