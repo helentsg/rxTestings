@@ -128,10 +128,10 @@ extension ImageCell {
         
         stackView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 50),
+            stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 30),
             stackView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             stackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
-            stackView.trailingAnchor.constraint(lessThanOrEqualTo: contentView.trailingAnchor, constant: -8),
+            stackView.trailingAnchor.constraint(lessThanOrEqualTo: contentView.trailingAnchor, constant: -30),
             stackView.bottomAnchor.constraint(greaterThanOrEqualTo: contentView.bottomAnchor, constant: -8)
         ])
         

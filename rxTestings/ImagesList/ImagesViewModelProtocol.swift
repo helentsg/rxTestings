@@ -16,7 +16,7 @@ protocol ImagesViewModelProtocol {
     var dataSource : BehaviorRelay<[Item]> { get }
     var imageLoader : ImageLoader { get }
     func addNewFirstFiveToItems()
-    func addLastToItems(forRow row: Int)
+    func addLastToItems(for prefetchedIndex: Int)
     
 }
 
@@ -63,13 +63,16 @@ extension ImagesViewModel {
         }
     }
     
-    func addLastToItems(forRow row: Int) {
+    func addLastToItems(for prefetchedIndex: Int) {
        
         let lastIndex = array.count - 1
-        if row == lastIndex, row <= 99 {
+        print("Prefetched \(prefetchedIndex)")
+        if prefetchedIndex == lastIndex, prefetchedIndex <= 99 {
+            
             endIndex += 1
             array = Array(startIndex ..< endIndex)
             updateDataSource()
+        
         }
         
     }
