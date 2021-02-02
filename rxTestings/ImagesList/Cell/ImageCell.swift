@@ -15,6 +15,8 @@ class ImageCell: UITableViewCell {
     
     private let stackView            = UIStackView()
     private let scrollView           = UIScrollView()
+    private let containerView        = UIView()
+    private let imageStackView       = UIStackView()
     private let placeholderImageView = UIImageView()
     private let titleLabel           = UILabel()
     private let activityIndicator    = UIActivityIndicatorView()
@@ -51,19 +53,22 @@ extension ImageCell {
         
         if let item = item {
             let numberString = String(item.number)
-            titleLabel.text = "# \(numberString)"
+            let text = item.isFifth ? "<- Scroll me!" : "# \(numberString)"
+            titleLabel.text = text
             activityIndicator.startAnimating()
             
             viewModel.image.subscribe {[weak self] (image) in
-                self?.placeholderImageView.image = image
-                self?.activityIndicator.startAnimating()
+                DispatchQueue.main.async {
+                    self?.placeholderImageView.image = image
+                    self?.activityIndicator.stopAnimating()
+                }
             } onError: { (error) in
                 print(error)
             } onCompleted: {
                 print("completed")
                 
             }.disposed(by: disposeBag)
-
+            
             
         } else {
             titleLabel.text = ""
@@ -71,25 +76,6 @@ extension ImageCell {
             activityIndicator.stopAnimating()
         }
         
-        
-        
-//        viewModel.downloadImage(withURL: viewModel.url, forCell: self) {[weak self] (result) in
-//            guard let self = self else {
-//                return
-//            }
-//            self.activityIndicator.stopAnimating()
-//            switch result {
-//            case .success((let fetchedCell, let fetchedImage)):
-//                if let imageCell = fetchedCell as? ImageCell,
-//                   imageCell.tag == self.viewModel.number,
-//                   let image = fetchedImage,
-//                   image != self.placeholderImageView.image {
-//                    self.placeholderImageView.image = image
-//                }
-//            case .failure(let error):
-//                print(error.description)
-//            }
-//        }
     }
     
 }
@@ -106,10 +92,26 @@ extension ImageCell {
     
     func setupView() {
         
+        contentView.isUserInteractionEnabled = true
+        
+        stackView.isUserInteractionEnabled = true
         stackView.axis = .horizontal
         stackView.alignment = .fill
         stackView.distribution = .equalSpacing
         stackView.spacing = 30
+        
+        scrollView.isUserInteractionEnabled = true
+        scrollView.isScrollEnabled = true
+        scrollView.showsVerticalScrollIndicator = true
+        scrollView.layer.cornerRadius = 16
+        
+        containerView.isUserInteractionEnabled = true
+        
+        imageStackView.isUserInteractionEnabled = true
+        imageStackView.axis = .vertical
+        imageStackView.alignment = .fill
+        imageStackView.distribution = .equalSpacing
+        imageStackView.spacing = 0
         
         placeholderImageView.layer.cornerRadius = 16
         
@@ -117,11 +119,13 @@ extension ImageCell {
     
     func addSubviews() {
         
-        addSubview(stackView)
+        contentView.addSubview(stackView)
         stackView.addArrangedSubview(scrollView)
         stackView.addArrangedSubview(titleLabel)
-        scrollView.addSubview(placeholderImageView)
-        addSubview(activityIndicator)
+        scrollView.addSubview(containerView)
+        containerView.addSubview(imageStackView)
+        imageStackView.addArrangedSubview(placeholderImageView)
+        contentView.addSubview(activityIndicator)
         
     }
     
@@ -129,25 +133,33 @@ extension ImageCell {
         
         stackView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            stackView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            stackView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            stackView.topAnchor.constraint(equalTo: topAnchor, constant: 8),
-            stackView.bottomAnchor.constraint(greaterThanOrEqualTo: bottomAnchor, constant: -8)
+            stackView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            stackView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            stackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
+            stackView.bottomAnchor.constraint(greaterThanOrEqualTo: contentView.bottomAnchor, constant: -8)
         ])
         
         scrollView.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint.activate([
+        NSLayoutConstraint.activate([
             scrollView.widthAnchor.constraint(equalToConstant: 150),
             scrollView.heightAnchor.constraint(greaterThanOrEqualToConstant: 150)
-            ])
+        ])
         
-        placeholderImageView.translatesAutoresizingMaskIntoConstraints = false
+        containerView.translatesAutoresizingMaskIntoConstraints = false
+               NSLayoutConstraint.activate([
+                   containerView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+                   containerView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+                   containerView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+                   containerView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+                   containerView.widthAnchor.constraint(equalTo: scrollView.widthAnchor)
+               ])
+        
+        imageStackView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            placeholderImageView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
-            placeholderImageView.topAnchor.constraint(equalTo: scrollView.topAnchor),
-            placeholderImageView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-            placeholderImageView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-            placeholderImageView.widthAnchor.constraint(equalTo: scrollView.widthAnchor)
+            imageStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+            imageStackView.topAnchor.constraint(equalTo: containerView.topAnchor),
+            imageStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+            imageStackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor)
         ])
         
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false

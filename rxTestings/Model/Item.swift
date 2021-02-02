@@ -11,13 +11,18 @@ struct Item {
     
     let number: Int!
     let url: URL!
+    var isFifth : Bool
     
     init(number: Int) {
         self.number = number
+        self.isFifth = number % 5 == 0
         // каждая пятая картинка должна быть высокой
         // и все остальные квадратные
-        let size = (number % 5 == 0) ? "150x500" : "150"
-        self.url = URL(string: "https://via.placeholder.com/\(size)/000000/FFFFFF/?text=\(number)")!
+        
+        let size = isFifth ? "150x500" : "150"
+        let color = isFifth ? "0000FF/808080" : "000000/FFFFFF"
+        
+        self.url = URL(string: "https://via.placeholder.com/\(size)/\(color)/?text=\(number)")!
     }
 
 }
