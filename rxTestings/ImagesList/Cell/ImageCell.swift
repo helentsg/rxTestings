@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class ImageCell: UITableViewCell {
     
@@ -22,6 +24,7 @@ class ImageCell: UITableViewCell {
             configure(with: viewModel.item)
         }
     }
+    let disposeBag = DisposeBag()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -49,7 +52,19 @@ extension ImageCell {
         if let item = item {
             let numberString = String(item.number)
             titleLabel.text = "# \(numberString)"
-      //      activityIndicator.startAnimating()
+            activityIndicator.startAnimating()
+            
+            viewModel.image.subscribe {[weak self] (image) in
+                self?.placeholderImageView.image = image
+                self?.activityIndicator.startAnimating()
+            } onError: { (error) in
+                print(error)
+            } onCompleted: {
+                print("completed")
+                
+            }.disposed(by: disposeBag)
+
+            
         } else {
             titleLabel.text = ""
             placeholderImageView.image = nil
@@ -103,10 +118,8 @@ extension ImageCell {
     func addSubviews() {
         
         addSubview(stackView)
-        
         stackView.addArrangedSubview(scrollView)
         stackView.addArrangedSubview(titleLabel)
-        
         scrollView.addSubview(placeholderImageView)
         addSubview(activityIndicator)
         
@@ -124,7 +137,8 @@ extension ImageCell {
         
         scrollView.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
-            scrollView.widthAnchor.constraint(equalToConstant: 150)
+            scrollView.widthAnchor.constraint(equalToConstant: 150),
+            scrollView.heightAnchor.constraint(greaterThanOrEqualToConstant: 150)
             ])
         
         placeholderImageView.translatesAutoresizingMaskIntoConstraints = false

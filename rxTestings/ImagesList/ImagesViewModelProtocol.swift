@@ -14,7 +14,9 @@ import RxCocoa
 protocol ImagesViewModelProtocol {
     
     var dataSource : BehaviorRelay<[Item]> { get }
+    var imageLoader : ImageLoader { get }
     func addNewFirstFiveToItems()
+    func addLastToItems()
     
 }
 
@@ -22,6 +24,7 @@ protocol ImagesViewModelProtocol {
 class ImagesViewModel : ImagesViewModelProtocol {
     
     let dataSource = BehaviorRelay(value: [Item]())
+    var imageLoader : ImageLoader
     
     private var array = [Int]()
     
@@ -31,6 +34,7 @@ class ImagesViewModel : ImagesViewModelProtocol {
     
     init() {
         
+        self.imageLoader = ImageLoader()
         array = Array(0..<20)
         updateDataSource()
         
@@ -66,7 +70,7 @@ extension ImagesViewModel {
             
             array = Array(startIndex ..< endIndex)
             updateDataSource()
-            
+
         }
     }
     

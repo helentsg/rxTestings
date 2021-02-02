@@ -29,15 +29,14 @@ extension ImagesViewController {
     func rxSetup() {
         
         /// Cell configuration:
-        viewModel.dataSource.bind(to: tableView.rx.items(cellIdentifier: ImageCell.identifier)) { row, item, cell in
+        viewModel.dataSource.bind(to: tableView.rx.items(cellIdentifier: ImageCell.identifier)) {[unowned self] row, item, cell in
             let cell = cell as! ImageCell
-            cell.viewModel = ImageCellViewModel(item: item)
+            cell.viewModel = ImageCellViewModel(imageLoader: self.viewModel.imageLoader, item: item)
         }.disposed(by: disposeBag)
         
         /// Row selected:
         tableView.rx.itemSelected
-            .subscribe(onNext: { [weak self] indexPath in
-                let cell = self?.tableView.cellForRow(at: indexPath) as! ImageCell
+            .subscribe(onNext: { indexPath in
                 print("Selected  \(indexPath.row)")
             }).disposed(by: disposeBag)
         
@@ -46,9 +45,12 @@ extension ImagesViewController {
             .subscribe(onNext: { [weak self] in
                 self?.tableView.refreshControl?.endRefreshing()
                 self?.viewModel.addNewFirstFiveToItems()
-//                let indexPaths = Array(0..<5).map ({ IndexPath(row: $0, section:0) })
-//                self?.tableView.reloadRows(at: indexPaths, with: .fade)
             }).disposed(by: disposeBag)
+        
+        /// Infinite scrolling:
+        tableView.rx.setPrefetchDataSource(self)
+            .disposed(by: disposeBag)
+        
     }
     
 }
@@ -83,6 +85,17 @@ extension ImagesViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.register(ImageCell.self, forCellReuseIdentifier: ImageCell.identifier)
         tableView.refreshControl = UIRefreshControl()
+        
+    }
+    
+}
+
+// MARK: - UITableView Data Source Prefetching:
+extension ImagesViewController: UITableViewDataSourcePrefetching {
+    
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        
+      //  viewModel.addLastToItems()
         
     }
     
