@@ -94,7 +94,11 @@ extension ImagesViewController: UITableViewDataSourcePrefetching {
     
     func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
         
-      //  viewModel.addLastToItems()
+        if let row = indexPaths.last?.row {
+            
+            viewModel.addLastToItems(forRow: row)
+            
+        }
         
     }
     

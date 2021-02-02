@@ -16,14 +16,14 @@ protocol ImagesViewModelProtocol {
     var dataSource : BehaviorRelay<[Item]> { get }
     var imageLoader : ImageLoader { get }
     func addNewFirstFiveToItems()
-    func addLastToItems()
+    func addLastToItems(forRow row: Int)
     
 }
 
 //MARK:- ImagesViewModel:
 class ImagesViewModel : ImagesViewModelProtocol {
     
-    let dataSource = BehaviorRelay(value: [Item]())
+    var dataSource = BehaviorRelay(value: [Item]())
     var imageLoader : ImageLoader
     
     private var array = [Int]()
@@ -63,15 +63,15 @@ extension ImagesViewModel {
         }
     }
     
-    func addLastToItems() {
-        
-        if array.count <= 99 {
+    func addLastToItems(forRow row: Int) {
+       
+        let lastIndex = array.count - 1
+        if row == lastIndex, row <= 99 {
             endIndex += 1
-            
             array = Array(startIndex ..< endIndex)
             updateDataSource()
-
         }
+        
     }
     
 }

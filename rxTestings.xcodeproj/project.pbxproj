@@ -14,7 +14,6 @@
 		F320B0F725C876E800C9BBBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F320B0F525C876E800C9BBBC /* LaunchScreen.storyboard */; };
 		F320B12825C87CAB00C9BBBC /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F320B12725C87CAB00C9BBBC /* Item.swift */; };
 		F320B13425C87E2E00C9BBBC /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F320B13325C87E2E00C9BBBC /* ImageLoader.swift */; };
-		F320B13925C87E6600C9BBBC /* NetworkRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F320B13825C87E6600C9BBBC /* NetworkRequestError.swift */; };
 		F320B13E25C8823000C9BBBC /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F320B13D25C8823000C9BBBC /* ImageCell.swift */; };
 		F320B14325C883E200C9BBBC /* ImageCellViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F320B14225C883E200C9BBBC /* ImageCellViewModelProtocol.swift */; };
 		F320B14825C884C000C9BBBC /* ImagesViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F320B14725C884C000C9BBBC /* ImagesViewModelProtocol.swift */; };
@@ -31,7 +30,6 @@
 		F320B0F825C876E800C9BBBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F320B12725C87CAB00C9BBBC /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		F320B13325C87E2E00C9BBBC /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
-		F320B13825C87E6600C9BBBC /* NetworkRequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestError.swift; sourceTree = "<group>"; };
 		F320B13D25C8823000C9BBBC /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		F320B14225C883E200C9BBBC /* ImageCellViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCellViewModelProtocol.swift; sourceTree = "<group>"; };
 		F320B14725C884C000C9BBBC /* ImagesViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesViewModelProtocol.swift; sourceTree = "<group>"; };
@@ -109,7 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				F320B13325C87E2E00C9BBBC /* ImageLoader.swift */,
-				F320B13825C87E6600C9BBBC /* NetworkRequestError.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -262,7 +259,6 @@
 				F320B0EB25C876C700C9BBBC /* AppDelegate.swift in Sources */,
 				F320B14825C884C000C9BBBC /* ImagesViewModelProtocol.swift in Sources */,
 				F320B14325C883E200C9BBBC /* ImageCellViewModelProtocol.swift in Sources */,
-				F320B13925C87E6600C9BBBC /* NetworkRequestError.swift in Sources */,
 				F320B13E25C8823000C9BBBC /* ImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
